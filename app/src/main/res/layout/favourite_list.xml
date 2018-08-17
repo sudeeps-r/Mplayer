@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/match_match"
+    android:background="@color/play_list_bg"
+    android:padding="@dimen/root_padding">
+
+    <TextView
+        android:id="@+id/tvCount"
+        style="@style/item_count"
+        android:paddingBottom="@dimen/track_padding"
+        android:text="hhh"
+         />
+
+    <include
+        layout="@layout/listview"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@id/tvCount" />
+
+    <include
+        android:id="@+id/layout_progress_indicator"
+        layout="@layout/progress_indicator"
+        android:visibility="gone"
+       />
+
+</RelativeLayout>

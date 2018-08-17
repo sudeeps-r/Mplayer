@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fullscreen_content"
+    style="@style/match_match"
+    android:animateLayoutChanges="true"
+    android:background="@color/colorPrimary"
+    android:padding="@dimen/root_padding">
+
+
+    <ImageView
+        style="@style/wrap_wrap"
+        android:layout_marginBottom="@dimen/splash_padding"
+        android:src="@drawable/group_2"
+        app:layout_constraintBottom_toTopOf="@id/etSearchBox"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <AutoCompleteTextView
+        android:id="@+id/etSearchBox"
+        style="@style/edit_text.album_search"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/match_wrap"
+        android:layout_marginTop="@dimen/splash_padding"
+        android:gravity="center"
+        android:text="@string/splash.label"
+        android:textColor="@color/color_white"
+        app:layout_constraintTop_toBottomOf="@id/etSearchBox" />
+</android.support.constraint.ConstraintLayout>

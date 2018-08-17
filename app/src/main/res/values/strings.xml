@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MPlayer</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- splashscreen -->
+    <string name="splash.label">Listen to your favourite\nsongs from youtube.</string>
+    <string name="splash.search.hint">Search Music, Title, Artist, Movies etc</string>
+
+    <string name="add_to_fav">add to favourite</string>
+    <string name="removed_from_fav">deleted from favourite</string>
+    <string name="loading">Please wait...</string>
+    <string name="no_search">No result, please refine your search criteria</string>
+    <string name="no_fav">No item found, start adding songs to favourite!!!</string>
+    <string name="favourites_cnt">Favourites-</string>
+    <string name="favourite_cnt">Favourite-</string>
+    <string name="search_keyword">Keyword shouldn\'t be emtpy</string>
+</resources>

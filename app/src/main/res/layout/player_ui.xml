@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/play_list_bg">
+
+    <include
+        layout="@layout/tool_bar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivAlbumMainArt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintTop_toBottomOf="@id/mToolbar" />
+
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/palyerView"
+        style="@style/match_wrap"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/track_padding"
+        android:background="@color/play_list_bg"
+        app:controller_layout_id="@layout/exo_playback_control_view"
+        app:fastforward_increment="30000"
+        app:layout_constraintTop_toBottomOf="@id/ivAlbumMainArt"
+        app:rewind_increment="30000"
+        app:show_timeout="0"
+        app:use_controller="false" />
+
+
+    <TextView
+        android:id="@+id/tvTrackName"
+        style="@style/match_wrap"
+        android:layout_marginTop="@dimen/audio_title_top"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/root_padding"
+        android:paddingRight="@dimen/root_padding"
+        android:textColor="@color/d_darker_gray"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/palyerView" />
+
+    <TextView
+        android:id="@+id/tvTrackSubName"
+        style="@style/match_wrap"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:maxLines="3"
+        android:paddingLeft="@dimen/root_padding"
+        android:paddingRight="@dimen/root_padding"
+        android:textColor="@color/darker_gray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTrackName" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/audioPlay"
+        style="@style/wrap_wrap"
+        android:layout_marginTop="@dimen/audio_title_top"
+        android:src="@drawable/triangle"
+        app:backgroundTint="@color/color_white"
+        app:elevation="6dp"
+        app:fabSize="normal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTrackSubName"
+        app:pressedTranslationZ="12dp" />
+
+    <ImageView
+        android:id="@+id/ivAddToFavourite"
+        style="@style/wrap_wrap"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/shape_heart"
+        app:layout_constraintStart_toEndOf="@id/audioPlay"
+        app:layout_constraintTop_toBottomOf="@id/tvTrackSubName" />
+
+    <ImageView
+        android:id="@+id/ivPlayList"
+        style="@style/wrap_wrap"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/combined_shape"
+        app:layout_constraintEnd_toStartOf="@id/audioPlay"
+        app:layout_constraintTop_toBottomOf="@id/tvTrackSubName" />
+
+
+</android.support.constraint.ConstraintLayout>

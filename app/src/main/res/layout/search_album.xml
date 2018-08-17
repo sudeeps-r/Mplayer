@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/match_match"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/searchContainer"
+        style="@style/match_wrap"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/root_padding">
+
+        <AutoCompleteTextView
+            android:id="@+id/etSearchBox"
+            style="@style/edit_text.album_search"
+            android:imeOptions="actionSearch" />
+
+    </LinearLayout>
+
+    <FrameLayout style="@style/match_match">
+
+        <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            style="@style/match_match"
+            android:background="@color/play_list_bg"
+            android:paddingLeft="@dimen/root_padding"
+            android:paddingRight="@dimen/root_padding">
+
+            <TextView
+                android:id="@+id/tvSongsCnt"
+                style="@style/item_count"
+                android:layout_marginTop="@dimen/track_padding"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vpSongsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintBottom_toTopOf="@+id/indicator"
+                app:layout_constraintTop_toBottomOf="@id/tvSongsCnt" />
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/indicator"
+                style="@style/match_wrap"
+                android:layout_marginBottom="@dimen/root_padding"
+                android:layout_marginTop="@dimen/track_padding"
+                app:ci_drawable="@drawable/rectangle_4"
+                app:ci_drawable_unselected="@drawable/rectangle_4_copy"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <include
+            android:id="@+id/layout_progress_indicator"
+            layout="@layout/progress_indicator"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

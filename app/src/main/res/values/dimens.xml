@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="root_padding">16dp</dimen>
+    <dimen name="splash_padding">20dp</dimen>
+    <dimen name="splash_search_drawable_padding">5dp</dimen>
+
+    <integer name="slide_animation_duration">500</integer>
+    <!-- splash timing-->
+    <string name="splash_timing">2</string>
+
+    <dimen name="font_small">12sp</dimen>
+
+    <!--search result-->
+    <dimen name="art_img_width">45dp</dimen>
+    <dimen name="art_img_height">45dp</dimen>
+    <dimen name="cell_padding">5dp</dimen>
+    <dimen name="track_padding">10dp</dimen>
+    <dimen name="track_text_left">10dp</dimen>
+    <dimen name="cell_text_top">2dp</dimen>
+    <dimen name="track_view_margin_top">5dp</dimen>
+    <dimen name="track_height">5dp</dimen>
+    <dimen name="track_left_right">1dp</dimen>
+    <!--Audio player-->
+    <dimen name="audio_title_top">20dp</dimen>
+    <dimen name="toolbar_elevation">4dp</dimen>
+
+</resources>

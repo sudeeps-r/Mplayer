@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/play_list_bg"
+    android:paddingLeft="@dimen/root_padding"
+    android:paddingRight="@dimen/root_padding">
+
+    <com.google.android.exoplayer2.ui.DefaultTimeBar
+        android:id="@id/exo_progress"
+        android:layout_width="0dp"
+        android:layout_height="26dp"
+        app:bar_height="@dimen/track_height"
+        app:played_color="@color/colorPrimary"
+        app:scrubber_color="@color/colorPrimary"
+        app:buffered_color="@color/darker_gray"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/exo_position"
+        style="@style/wrap_wrap"
+        android:textColor="@color/darker_gray"
+        android:textSize="@dimen/font_small"
+        android:text="fd"
+        android:paddingLeft="6dp"
+        app:layout_constraintStart_toStartOf="@id/exo_progress"
+        app:layout_constraintTop_toBottomOf="@id/exo_progress" />
+
+    <TextView
+        android:id="@+id/exo_duration"
+        style="@style/wrap_wrap"
+        android:textColor="@color/darker_gray"
+        android:textSize="@dimen/font_small"
+        android:text="sdfs"
+        android:paddingRight="6dp"
+        app:layout_constraintEnd_toEndOf="@id/exo_progress"
+        app:layout_constraintTop_toBottomOf="@id/exo_progress" />
+
+
+
+</android.support.constraint.ConstraintLayout>
